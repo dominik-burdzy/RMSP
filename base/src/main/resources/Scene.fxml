@@ -1,0 +1,1338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import java.util.ArrayList?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.edu.agh.rmsp.base.gui.App">
+	<children>
+		<TabPane fx:id="tabPane" prefHeight="774.0" prefWidth="1240.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<tabs>
+				<Tab fx:id="tab1" text="Resource Monitoring System Prototype ">
+					<content>
+						<AnchorPane>
+							<children>
+                        <FlowPane AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="5.0">
+                           <children>
+                              <AnchorPane fx:id="anchor1" prefHeight="710.0" prefWidth="1215.0">
+                                 <children>
+            										<Accordion prefHeight="294.0" prefWidth="211.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            											<panes>
+            												<TitledPane prefHeight="171.0" prefWidth="202.0" text="Prediction algorithm">
+            													<content>
+            														<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            															<children>
+            																<ChoiceBox fx:id="algorithmChoiceBox1" layoutX="5.0" layoutY="8.0" prefHeight="25.0" prefWidth="190.0" />
+                                                      <GridPane fx:id="polyGrid1" layoutX="5.0" layoutY="40.0" prefHeight="29.0" prefWidth="190.0">
+                                                        <columnConstraints>
+                                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="110.0" minWidth="10.0" prefWidth="109.0" />
+                                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="81.0" />
+                                                        </columnConstraints>
+                                                        <rowConstraints>
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        </rowConstraints>
+                                                         <children>
+                                                            <Label prefHeight="17.0" prefWidth="112.0" text="Polynomial degree" />
+                                                            <TextField fx:id="regressionPolyDegree1" prefHeight="25.0" prefWidth="69.0" GridPane.columnIndex="1" />
+                                                         </children>
+                                                      </GridPane>
+            															</children>
+            														</AnchorPane>
+            													</content>
+            												</TitledPane>
+            												<TitledPane text="Prediction settings">
+            													<content>
+            														<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            															<children>
+            																<GridPane layoutX="6.0" layoutY="5.0" prefHeight="84.0" prefWidth="189.0">
+            																	<columnConstraints>
+            																		<ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="64.0" />
+            																		<ColumnConstraints hgrow="SOMETIMES" maxWidth="157.0" minWidth="10.0" prefWidth="156.0" />
+            																	</columnConstraints>
+            																	<rowConstraints>
+            																		<RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
+            																		<RowConstraints maxHeight="39.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+            																	</rowConstraints>
+            																	<children>
+            																		<GridPane>
+            																			<columnConstraints>
+            																				<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            																			</columnConstraints>
+            																			<rowConstraints>
+            																				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																			</rowConstraints>
+            																			<children>
+            																				<Label text="Probes" />
+            																				<Label prefHeight="17.0" prefWidth="58.0" text="Predict" GridPane.rowIndex="1" />
+            																			</children>
+            																		</GridPane>
+            																		<GridPane GridPane.columnIndex="1">
+            																			<columnConstraints>
+            																				<ColumnConstraints hgrow="SOMETIMES" maxWidth="69.0" minWidth="10.0" prefWidth="53.0" />
+            																				<ColumnConstraints hgrow="SOMETIMES" maxWidth="68.0" minWidth="0.0" prefWidth="3.0" />
+            																				<ColumnConstraints hgrow="SOMETIMES" maxWidth="93.0" minWidth="10.0" prefWidth="86.0" />
+            																			</columnConstraints>
+            																			<rowConstraints>
+            																				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																			</rowConstraints>
+            																			<children>
+            																				<GridPane>
+            																					<columnConstraints>
+            																						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            																					</columnConstraints>
+            																					<rowConstraints>
+            																						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																					</rowConstraints>
+            																					<children>
+            																						<TextField fx:id="predictionSettingsProbes1" />
+            																						<TextField fx:id="predictionSettingsToPredict1" GridPane.rowIndex="1" />
+            																					</children>
+            																				</GridPane>
+            																				<ChoiceBox fx:id="predictionSettingsProbesTimeUnitChoiceBox1" prefWidth="150.0" GridPane.columnIndex="2" />
+            																			</children>
+            																		</GridPane>
+            																		<GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+            																			<columnConstraints>
+            																				<ColumnConstraints hgrow="SOMETIMES" maxWidth="68.0" minWidth="10.0" prefWidth="52.0" />
+            																				<ColumnConstraints hgrow="SOMETIMES" maxWidth="68.0" minWidth="3.0" prefWidth="5.0" />
+            																				<ColumnConstraints hgrow="SOMETIMES" maxWidth="97.0" minWidth="10.0" prefWidth="87.0" />
+            																			</columnConstraints>
+            																			<rowConstraints>
+            																				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																			</rowConstraints>
+            																			<children>
+            																				<ChoiceBox fx:id="predictionSettingsUpdateTimeUnitChoiceBox1" prefWidth="150.0" GridPane.columnIndex="2" />
+            																				<TextField fx:id="predictionSettingsUpdate1" />
+            																			</children>
+            																		</GridPane>
+            																		<Label prefHeight="17.0" prefWidth="57.0" text="Update " GridPane.rowIndex="1" />
+            																	</children>
+            																</GridPane>
+            															</children>
+            														</AnchorPane>
+            													</content>
+            												</TitledPane>
+            												<TitledPane text="Neural Network settings">
+            													<content>
+            														<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="9.0" prefWidth="200.0">
+            															<children>
+            																<GridPane layoutX="5.0" layoutY="5.0" prefHeight="181.0" prefWidth="190.0">
+            																	<columnConstraints>
+            																		<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            																		<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            																	</columnConstraints>
+            																	<rowConstraints>
+            																		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																	</rowConstraints>
+            																	<children>
+            																		<Label text="Set size" />
+            																		<Label text="Momentum" GridPane.rowIndex="2" />
+            																		<Label text="Max iterations" GridPane.rowIndex="3" />
+            																		<Label text="Max error inc." GridPane.rowIndex="4" />
+            																		<Label text="Max error" GridPane.rowIndex="5" />
+            																		<TextField fx:id="nSetSize1" GridPane.columnIndex="1" />
+            																		<TextField fx:id="nLearningRate1" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            																		<TextField fx:id="nMomentum1" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            																		<TextField fx:id="nMaxIter1" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            																		<TextField fx:id="nMaxErrorInc1" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            																		<TextField fx:id="nMaxError1" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            																		<Label text="Learning rate" GridPane.rowIndex="1" />
+                                                            <Label text="Initial records" GridPane.rowIndex="6" />
+                                                            <TextField fx:id="nOfInitialNetworkDataRecords1" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            																	</children>
+            																</GridPane>
+            																<Button fx:id="stop1" layoutX="5.0" layoutY="164.0" mnemonicParsing="false" onAction="#StopButtonHandler" prefHeight="25.0" prefWidth="59.0" text="Stop" AnchorPane.bottomAnchor="0.0" />
+            																<Button fx:id="continue1" layoutX="68.0" layoutY="164.0" mnemonicParsing="false" onAction="#ContinueButtonHandler" text="Continue" AnchorPane.bottomAnchor="0.0" />
+            																<Button fx:id="reset1" layoutX="137.0" layoutY="164.0" mnemonicParsing="false" onAction="#ResetButtonHandler" prefHeight="25.0" prefWidth="58.0" text="Reset" AnchorPane.bottomAnchor="0.0" />
+            															</children>
+            														</AnchorPane>
+            													</content>
+            												</TitledPane>
+            												<TitledPane layoutX="10.0" layoutY="60.0" prefHeight="216.0" prefWidth="212.0" text="Critical values">
+            													<content>
+            														<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="9.0" prefWidth="200.0">
+            															<children>
+            																<GridPane layoutX="10.0" layoutY="53.0" prefHeight="55.0" prefWidth="190.0">
+            																	<children>
+            																		<Label text="Min" />
+            																		<TextField fx:id="critMin1" GridPane.columnIndex="1" />
+            																		<TextField fx:id="critMax1" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            																		<Label text="Max" GridPane.rowIndex="1" />
+            																	</children>
+            																	<columnConstraints>
+            																		<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            																		<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            																	</columnConstraints>
+            																	<rowConstraints>
+            																		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																	</rowConstraints>
+            																</GridPane>
+                                                      <CheckBox fx:id="fixedCrit1" layoutX="5.0" layoutY="33.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="200.0" text="Constant" />
+                                                      <TextField fx:id="derivativeCritValue1" layoutX="105.0" layoutY="117.0" prefHeight="25.0" prefWidth="92.0" />
+                                                      <CheckBox fx:id="derivativeCrit1" layoutX="5.0" layoutY="121.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="78.0" text="Tangent" />
+                                                      <CheckBox fx:id="varianceCrit1" layoutX="5.0" layoutY="155.0" mnemonicParsing="false" text="Variance" />
+                                                      <TextField fx:id="varianceCritValue1" layoutX="105.0" layoutY="151.0" prefHeight="25.0" prefWidth="92.0" />
+                                                      <Label layoutX="5.0" layoutY="6.0" text="Range" />
+                                                      <Slider fx:id="rangeSlider1" layoutX="98.0" layoutY="8.0" prefHeight="14.0" prefWidth="106.0" value="100.0"/>
+            															</children>
+            														</AnchorPane>
+            													</content>
+            												</TitledPane>
+            												<TitledPane text="Tests">
+            													<content>
+            														<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="9.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Button fx:id="testStart1" layoutX="71.0" layoutY="2.0" mnemonicParsing="false" onAction="#startTest" text="Start tests" />
+                                                      <Label layoutY="171.0" text="Best method:" />
+                                                      <TextField fx:id="testResult1" editable="false" layoutX="76.0" layoutY="167.0" prefHeight="25.0" prefWidth="128.0" />
+                                                      <GridPane layoutY="27.0">
+                                                        <columnConstraints>
+                                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="117.0" minWidth="10.0" prefWidth="114.0" />
+                                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="86.0" />
+                                                        </columnConstraints>
+                                                        <rowConstraints>
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        </rowConstraints>
+                                                         <children>
+                                                            <TextField fx:id="testRecords1" text="20" GridPane.columnIndex="1" />
+                                                            <Label prefHeight="17.0" prefWidth="115.0" text="Number of records" />
+                                                         </children>
+                                                      </GridPane>
+                                                      <GridPane layoutY="57.0">
+                                                        <columnConstraints>
+                                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                        </columnConstraints>
+                                                        <rowConstraints>
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        </rowConstraints>
+                                                         <children>
+                                                            <CheckBox fx:id="testArima1" mnemonicParsing="false" selected="true" text="Arima" />
+                                                            <CheckBox fx:id="testBats1" mnemonicParsing="false" selected="true" text="Bats" GridPane.rowIndex="1" />
+                                                            <CheckBox fx:id="testGarch1" mnemonicParsing="false" selected="true" text="Garch" GridPane.rowIndex="2" />
+                                                            <CheckBox fx:id="testHoltWinters1" mnemonicParsing="false" selected="true" text="Holt Winters" GridPane.columnIndex="1" />
+                                                            <CheckBox fx:id="testRegression1" mnemonicParsing="false" selected="true" text="Regression" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                            <CheckBox fx:id="testNeural1" mnemonicParsing="false" selected="true" text="Neural" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                         </children>
+                                                      </GridPane>
+                                                      <ProgressBar fx:id="testProgress1" layoutX="6.0" layoutY="147.0" prefWidth="200.0" progress="0.0" />
+                                                   </children></AnchorPane>
+            													</content>
+            												</TitledPane>
+            											</panes>
+            										</Accordion>
+      										<GridPane prefHeight="29.0" prefWidth="363.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+      											<columnConstraints>
+      												<ColumnConstraints hgrow="SOMETIMES" maxWidth="113.0" minWidth="10.0" prefWidth="54.0" />
+      												<ColumnConstraints hgrow="SOMETIMES" maxWidth="194.0" minWidth="10.0" prefWidth="169.0" />
+      												<ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="138.0" />
+      											</columnConstraints>
+      											<rowConstraints>
+      												<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      											</rowConstraints>
+      											<children>
+      												<Label prefHeight="17.0" prefWidth="71.0" text="Resource:" />
+      												<ChoiceBox fx:id="resourceChoiceBox1" prefHeight="25.0" prefWidth="193.0" GridPane.columnIndex="1" />
+      												<Button fx:id="applyAll1" mnemonicParsing="false" onAction="#ApplyAllButtonHandler" prefHeight="25.0" prefWidth="136.0" text="Apply all" GridPane.columnIndex="2" GridPane.halignment="RIGHT">
+      													<GridPane.margin>
+      														<Insets left="10.0" />
+      													</GridPane.margin>
+      												</Button>
+      											</children>
+      										</GridPane>
+      
+                              										<LineChart fx:id="lineChart1" animated="false" createSymbols="false" prefHeight="240.0" prefWidth="377.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="220.0" AnchorPane.topAnchor="20.0">
+      											<xAxis>
+      												<CategoryAxis />
+      											</xAxis>
+      											<yAxis>
+      												<NumberAxis />
+      											</yAxis>
+      										</LineChart>
+      										<Label text="Current prediction algorithm: " AnchorPane.topAnchor="0.0" />
+      										<Label fx:id="algorithmNameLabel1" prefHeight="17.0" prefWidth="223.0" text="hh" AnchorPane.leftAnchor="160.0" AnchorPane.topAnchor="0.0">
+      											<font>
+      												<Font name="System Bold" size="12.0" />
+      											</font>
+      										</Label>
+                                 </children>
+                                 <FlowPane.margin>
+                                    <Insets bottom="8.0" right="8.0" />
+                                 </FlowPane.margin>
+                              </AnchorPane>
+							           <AnchorPane fx:id="anchor2" prefHeight="355.0" prefWidth="1215.0" visible="false">
+                                 <children>
+            										<Accordion prefHeight="294.0" prefWidth="211.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            											<panes>
+            												<TitledPane prefHeight="171.0" prefWidth="202.0" text="Prediction algorithm">
+            													<content>
+            														<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            															<children>
+            																<ChoiceBox fx:id="algorithmChoiceBox2" layoutX="5.0" layoutY="8.0" prefHeight="25.0" prefWidth="190.0" />
+            																  <GridPane fx:id="polyGrid2" layoutX="5.0" layoutY="40.0" prefHeight="29.0" prefWidth="190.0">
+                                                        <columnConstraints>
+                                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="110.0" minWidth="10.0" prefWidth="109.0" />
+                                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="81.0" />
+                                                        </columnConstraints>
+                                                        <rowConstraints>
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        </rowConstraints>
+                                                         <children>
+                                                            <Label prefHeight="17.0" prefWidth="112.0" text="Polynomial degree" />
+                                                            <TextField fx:id="regressionPolyDegree2" prefHeight="25.0" prefWidth="69.0" GridPane.columnIndex="1" />
+                                                         </children>
+                                                      </GridPane>
+            															</children>
+            														</AnchorPane>
+            													</content>
+            												</TitledPane>
+            												<TitledPane text="Prediction settings">
+            													<content>
+            														<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            															<children>
+            																<GridPane layoutX="6.0" layoutY="5.0" prefHeight="84.0" prefWidth="189.0">
+            																	<columnConstraints>
+            																		<ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="64.0" />
+            																		<ColumnConstraints hgrow="SOMETIMES" maxWidth="157.0" minWidth="10.0" prefWidth="156.0" />
+            																	</columnConstraints>
+            																	<rowConstraints>
+            																		<RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
+            																		<RowConstraints maxHeight="39.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+            																	</rowConstraints>
+            																	<children>
+            																		<GridPane>
+            																			<columnConstraints>
+            																				<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            																			</columnConstraints>
+            																			<rowConstraints>
+            																				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																			</rowConstraints>
+            																			<children>
+            																				<Label text="Probes" />
+            																				<Label prefHeight="17.0" prefWidth="58.0" text="Predict" GridPane.rowIndex="1" />
+            																			</children>
+            																		</GridPane>
+            																		<GridPane GridPane.columnIndex="1">
+            																			<columnConstraints>
+            																				<ColumnConstraints hgrow="SOMETIMES" maxWidth="69.0" minWidth="10.0" prefWidth="53.0" />
+            																				<ColumnConstraints hgrow="SOMETIMES" maxWidth="68.0" minWidth="0.0" prefWidth="3.0" />
+            																				<ColumnConstraints hgrow="SOMETIMES" maxWidth="93.0" minWidth="10.0" prefWidth="86.0" />
+            																			</columnConstraints>
+            																			<rowConstraints>
+            																				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																			</rowConstraints>
+            																			<children>
+            																				<GridPane>
+            																					<columnConstraints>
+            																						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            																					</columnConstraints>
+            																					<rowConstraints>
+            																						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																					</rowConstraints>
+            																					<children>
+            																						<TextField fx:id="predictionSettingsProbes2" />
+            																						<TextField fx:id="predictionSettingsToPredict2" GridPane.rowIndex="1" />
+            																					</children>
+            																				</GridPane>
+            																				<ChoiceBox fx:id="predictionSettingsProbesTimeUnitChoiceBox2" prefWidth="150.0" GridPane.columnIndex="2" />
+            																			</children>
+            																		</GridPane>
+            																		<GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+            																			<columnConstraints>
+            																				<ColumnConstraints hgrow="SOMETIMES" maxWidth="68.0" minWidth="10.0" prefWidth="52.0" />
+            																				<ColumnConstraints hgrow="SOMETIMES" maxWidth="68.0" minWidth="3.0" prefWidth="5.0" />
+            																				<ColumnConstraints hgrow="SOMETIMES" maxWidth="97.0" minWidth="10.0" prefWidth="87.0" />
+            																			</columnConstraints>
+            																			<rowConstraints>
+            																				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																			</rowConstraints>
+            																			<children>
+            																				<ChoiceBox fx:id="predictionSettingsUpdateTimeUnitChoiceBox2" prefWidth="150.0" GridPane.columnIndex="2" />
+            																				<TextField fx:id="predictionSettingsUpdate2" />
+            																			</children>
+            																		</GridPane>
+            																		<Label prefHeight="17.0" prefWidth="57.0" text="Update " GridPane.rowIndex="1" />
+            																	</children>
+            																</GridPane>
+            															</children>
+            														</AnchorPane>
+            													</content>
+            												</TitledPane>
+            												<TitledPane text="Neural Network settings">
+            													<content>
+            														<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="9.0" prefWidth="200.0">
+            															<children>
+            																<GridPane layoutX="5.0" layoutY="5.0" prefHeight="181.0" prefWidth="190.0">
+            																	<columnConstraints>
+            																		<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            																		<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            																	</columnConstraints>
+            																	<rowConstraints>
+            																		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																	</rowConstraints>
+            																	<children>
+            																		<Label text="Set size" />
+            																		<Label text="Momentum" GridPane.rowIndex="2" />
+            																		<Label text="Max iterations" GridPane.rowIndex="3" />
+            																		<Label text="Max error inc." GridPane.rowIndex="4" />
+            																		<Label text="Max error" GridPane.rowIndex="5" />
+            																		<TextField fx:id="nSetSize2" GridPane.columnIndex="1" />
+            																		<TextField fx:id="nLearningRate2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            																		<TextField fx:id="nMomentum2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            																		<TextField fx:id="nMaxIter2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            																		<TextField fx:id="nMaxErrorInc2" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            																		<TextField fx:id="nMaxError2" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            																		<Label text="Learning rate" GridPane.rowIndex="1" />
+                                                            <Label text="Initial records" GridPane.rowIndex="6" />
+                                                            <TextField fx:id="nOfInitialNetworkDataRecords2" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            																	</children>
+            																</GridPane>
+            																<Button fx:id="stop2" layoutX="5.0" layoutY="164.0" mnemonicParsing="false" onAction="#StopButtonHandler" prefHeight="25.0" prefWidth="59.0" text="Stop" AnchorPane.bottomAnchor="0.0" />
+            																<Button fx:id="continue2" layoutX="68.0" layoutY="164.0" mnemonicParsing="false" onAction="#ContinueButtonHandler" text="Continue" AnchorPane.bottomAnchor="0.0" />
+            																<Button fx:id="reset2" layoutX="137.0" layoutY="164.0" mnemonicParsing="false" onAction="#ResetButtonHandler" prefHeight="25.0" prefWidth="58.0" text="Reset" AnchorPane.bottomAnchor="0.0" />
+            															</children>
+            														</AnchorPane>
+            													</content>
+            												</TitledPane>
+                                          <TitledPane prefHeight="216.0" prefWidth="212.0" text="Critical values">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="9.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Slider fx:id="rangeSlider2" prefHeight="14.0" prefWidth="106.0" value="100.0"/>
+                                                      <Label text="Range" />
+                                                      <TextField fx:id="varianceCritValue2" prefHeight="25.0" prefWidth="92.0" />
+                                                      <CheckBox fx:id="varianceCrit2" mnemonicParsing="false" text="Variance" />
+                                                      <CheckBox fx:id="derivativeCrit2" mnemonicParsing="false" prefHeight="17.0" prefWidth="78.0" text="Tangent" />
+                                                      <TextField fx:id="derivativeCritValue2" prefHeight="25.0" prefWidth="92.0" />
+                                                      <CheckBox fx:id="fixedCrit2" mnemonicParsing="false" prefHeight="20.0" prefWidth="200.0" text="Constant" />
+                                                      <GridPane prefHeight="55.0" prefWidth="190.0">
+                                                         <children>
+                                                            <Label text="Min" />
+                                                            <TextField fx:id="critMin2" GridPane.columnIndex="1" />
+                                                            <TextField fx:id="critMax2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                            <Label text="Max" GridPane.rowIndex="1" />
+                                                         </children>
+                                                         <columnConstraints>
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                         </columnConstraints>
+                                                         <rowConstraints>
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                         </rowConstraints>
+                                                      </GridPane>
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                          </TitledPane>
+            												            												<TitledPane text="Tests">
+            													<content>
+            														<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="9.0" prefWidth="200.0">
+                                                   <children>
+                                                      <ProgressBar fx:id="testProgress2" prefWidth="200.0" progress="0.0" />
+                                                      <GridPane>
+                                                         <children>
+                                                            <CheckBox fx:id="testArima2" mnemonicParsing="false" selected="true" text="Arima" />
+                                                            <CheckBox fx:id="testBats2" mnemonicParsing="false" selected="true" text="Bats" GridPane.rowIndex="1" />
+                                                            <CheckBox fx:id="testGarch2" mnemonicParsing="false" selected="true" text="Garch" GridPane.rowIndex="2" />
+                                                            <CheckBox fx:id="testHoltWinters2" mnemonicParsing="false" selected="true" text="Holt Winters" GridPane.columnIndex="1" />
+                                                            <CheckBox fx:id="testRegression2" mnemonicParsing="false" selected="true" text="Regression" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                            <CheckBox fx:id="testNeural2" mnemonicParsing="false" selected="true" text="Neural" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                         </children>
+                                                         <columnConstraints>
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                         </columnConstraints>
+                                                         <rowConstraints>
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                         </rowConstraints>
+                                                      </GridPane>
+                                                      <GridPane>
+                                                         <children>
+                                                            <TextField fx:id="testRecords2" text="20" GridPane.columnIndex="1" />
+                                                            <Label prefHeight="17.0" prefWidth="115.0" text="Number of records" />
+                                                         </children>
+                                                         <columnConstraints>
+                                                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="117.0" minWidth="10.0" prefWidth="114.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="86.0" />
+                                                         </columnConstraints>
+                                                         <rowConstraints>
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                         </rowConstraints>
+                                                      </GridPane>
+                                                      <TextField fx:id="testResult2" editable="false" prefHeight="25.0" prefWidth="128.0" />
+                                                      <Label text="Best method:" />
+                                                      <Button fx:id="testStart2" mnemonicParsing="false" onAction="#startTest" text="Start tests" />
+                                                   </children></AnchorPane>
+            													</content>
+            												</TitledPane>
+            											</panes>            											
+            										</Accordion>
+      										<GridPane prefHeight="29.0" prefWidth="363.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+      											<columnConstraints>
+      												<ColumnConstraints hgrow="SOMETIMES" maxWidth="113.0" minWidth="10.0" prefWidth="54.0" />
+      												<ColumnConstraints hgrow="SOMETIMES" maxWidth="194.0" minWidth="10.0" prefWidth="169.0" />
+      												<ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="138.0" />
+      											</columnConstraints>
+      											<rowConstraints>
+      												<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      											</rowConstraints>
+      											<children>
+      												<Label prefHeight="17.0" prefWidth="71.0" text="Resource:" />
+      												<ChoiceBox fx:id="resourceChoiceBox2" prefHeight="25.0" prefWidth="193.0" GridPane.columnIndex="1" />
+      												<Button fx:id="applyAll2" mnemonicParsing="false" onAction="#ApplyAllButtonHandler" prefHeight="25.0" prefWidth="136.0" text="Apply all" GridPane.columnIndex="2" GridPane.halignment="RIGHT">
+      													<GridPane.margin>
+      														<Insets left="10.0" />
+      													</GridPane.margin>
+      												</Button>
+      											</children>
+      										</GridPane>
+      
+                              										<LineChart fx:id="lineChart2" animated="false" createSymbols="false" prefHeight="240.0" prefWidth="377.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="220.0" AnchorPane.topAnchor="20.0">
+      											<xAxis>
+      												<CategoryAxis />
+      											</xAxis>
+      											<yAxis>
+      												<NumberAxis />
+      											</yAxis>
+      										</LineChart>
+      										<Label text="Current prediction algorithm: " AnchorPane.topAnchor="0.0" />
+      										<Label fx:id="algorithmNameLabel2" prefHeight="17.0" prefWidth="223.0" text="hh" AnchorPane.leftAnchor="160.0" AnchorPane.topAnchor="0.0">
+      											<font>
+      												<Font name="System Bold" size="12.0" />
+      											</font>
+      										</Label>
+                                 </children>
+                                 <FlowPane.margin>
+                                    <Insets bottom="8.0" right="8.0" />
+                                 </FlowPane.margin>
+                              </AnchorPane>
+							           <AnchorPane fx:id="anchor3" prefHeight="355.0" prefWidth="605.0" visible="false">
+                                 <children>
+            										<Accordion prefHeight="294.0" prefWidth="211.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            											<panes>
+            												<TitledPane prefHeight="171.0" prefWidth="202.0" text="Prediction algorithm">
+            													<content>
+            														<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            															<children>
+            																<ChoiceBox fx:id="algorithmChoiceBox3" layoutX="5.0" layoutY="8.0" prefHeight="25.0" prefWidth="190.0" />
+            																  <GridPane fx:id="polyGrid3" layoutX="5.0" layoutY="40.0" prefHeight="29.0" prefWidth="190.0">
+                                                        <columnConstraints>
+                                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="110.0" minWidth="10.0" prefWidth="109.0" />
+                                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="81.0" />
+                                                        </columnConstraints>
+                                                        <rowConstraints>
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        </rowConstraints>
+                                                         <children>
+                                                            <Label prefHeight="17.0" prefWidth="112.0" text="Polynomial degree" />
+                                                            <TextField fx:id="regressionPolyDegree3" prefHeight="25.0" prefWidth="69.0" GridPane.columnIndex="1" />
+                                                         </children>
+                                                      </GridPane>
+            															</children>
+            														</AnchorPane>
+            													</content>
+            												</TitledPane>
+            												<TitledPane text="Prediction settings">
+            													<content>
+            														<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            															<children>
+            																<GridPane layoutX="6.0" layoutY="5.0" prefHeight="84.0" prefWidth="189.0">
+            																	<columnConstraints>
+            																		<ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="64.0" />
+            																		<ColumnConstraints hgrow="SOMETIMES" maxWidth="157.0" minWidth="10.0" prefWidth="156.0" />
+            																	</columnConstraints>
+            																	<rowConstraints>
+            																		<RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
+            																		<RowConstraints maxHeight="39.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+            																	</rowConstraints>
+            																	<children>
+            																		<GridPane>
+            																			<columnConstraints>
+            																				<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            																			</columnConstraints>
+            																			<rowConstraints>
+            																				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																			</rowConstraints>
+            																			<children>
+            																				<Label text="Probes" />
+            																				<Label prefHeight="17.0" prefWidth="58.0" text="Predict" GridPane.rowIndex="1" />
+            																			</children>
+            																		</GridPane>
+            																		<GridPane GridPane.columnIndex="1">
+            																			<columnConstraints>
+            																				<ColumnConstraints hgrow="SOMETIMES" maxWidth="69.0" minWidth="10.0" prefWidth="53.0" />
+            																				<ColumnConstraints hgrow="SOMETIMES" maxWidth="68.0" minWidth="0.0" prefWidth="3.0" />
+            																				<ColumnConstraints hgrow="SOMETIMES" maxWidth="93.0" minWidth="10.0" prefWidth="86.0" />
+            																			</columnConstraints>
+            																			<rowConstraints>
+            																				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																			</rowConstraints>
+            																			<children>
+            																				<GridPane>
+            																					<columnConstraints>
+            																						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            																					</columnConstraints>
+            																					<rowConstraints>
+            																						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																					</rowConstraints>
+            																					<children>
+            																						<TextField fx:id="predictionSettingsProbes3" />
+            																						<TextField fx:id="predictionSettingsToPredict3" GridPane.rowIndex="1" />
+            																					</children>
+            																				</GridPane>
+            																				<ChoiceBox fx:id="predictionSettingsProbesTimeUnitChoiceBox3" prefWidth="150.0" GridPane.columnIndex="2" />
+            																			</children>
+            																		</GridPane>
+            																		<GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+            																			<columnConstraints>
+            																				<ColumnConstraints hgrow="SOMETIMES" maxWidth="68.0" minWidth="10.0" prefWidth="52.0" />
+            																				<ColumnConstraints hgrow="SOMETIMES" maxWidth="68.0" minWidth="3.0" prefWidth="5.0" />
+            																				<ColumnConstraints hgrow="SOMETIMES" maxWidth="97.0" minWidth="10.0" prefWidth="87.0" />
+            																			</columnConstraints>
+            																			<rowConstraints>
+            																				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																			</rowConstraints>
+            																			<children>
+            																				<ChoiceBox fx:id="predictionSettingsUpdateTimeUnitChoiceBox3" prefWidth="150.0" GridPane.columnIndex="2" />
+            																				<TextField fx:id="predictionSettingsUpdate3" />
+            																			</children>
+            																		</GridPane>
+            																		<Label prefHeight="17.0" prefWidth="57.0" text="Update " GridPane.rowIndex="1" />
+            																	</children>
+            																</GridPane>
+            															</children>
+            														</AnchorPane>
+            													</content>
+            												</TitledPane>
+            												<TitledPane text="Neural Network settings">
+            													<content>
+            														<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="9.0" prefWidth="200.0">
+            															<children>
+            																<GridPane layoutX="5.0" layoutY="5.0" prefHeight="181.0" prefWidth="190.0">
+            																	<columnConstraints>
+            																		<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            																		<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            																	</columnConstraints>
+            																	<rowConstraints>
+            																		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																	</rowConstraints>
+            																	<children>
+            																		<Label text="Set size" />
+            																		<Label text="Momentum" GridPane.rowIndex="2" />
+            																		<Label text="Max iterations" GridPane.rowIndex="3" />
+            																		<Label text="Max error inc." GridPane.rowIndex="4" />
+            																		<Label text="Max error" GridPane.rowIndex="5" />
+            																		<TextField fx:id="nSetSize3" GridPane.columnIndex="1" />
+            																		<TextField fx:id="nLearningRate3" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            																		<TextField fx:id="nMomentum3" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            																		<TextField fx:id="nMaxIter3" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            																		<TextField fx:id="nMaxErrorInc3" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            																		<TextField fx:id="nMaxError3" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            																		<Label text="Learning rate" GridPane.rowIndex="1" />
+                                                            <Label text="Initial records" GridPane.rowIndex="6" />
+                                                            <TextField fx:id="nOfInitialNetworkDataRecords3" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            																	</children>
+            																</GridPane>
+            																<Button fx:id="stop3" layoutX="5.0" layoutY="164.0" mnemonicParsing="false" onAction="#StopButtonHandler" prefHeight="25.0" prefWidth="59.0" text="Stop" AnchorPane.bottomAnchor="0.0" />
+            																<Button fx:id="continue3" layoutX="68.0" layoutY="164.0" mnemonicParsing="false" onAction="#ContinueButtonHandler" text="Continue" AnchorPane.bottomAnchor="0.0" />
+            																<Button fx:id="reset3" layoutX="137.0" layoutY="164.0" mnemonicParsing="false" onAction="#ResetButtonHandler" prefHeight="25.0" prefWidth="58.0" text="Reset" AnchorPane.bottomAnchor="0.0" />
+            															</children>
+            														</AnchorPane>
+            													</content>
+            												</TitledPane>
+                                          <TitledPane prefHeight="216.0" prefWidth="212.0" text="Critical values">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="9.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Slider fx:id="rangeSlider3" prefHeight="14.0" prefWidth="106.0" value="100.0"/>
+                                                      <Label text="Range" />
+                                                      <TextField fx:id="varianceCritValue3" prefHeight="25.0" prefWidth="92.0" />
+                                                      <CheckBox fx:id="varianceCrit3" mnemonicParsing="false" text="Variance" />
+                                                      <CheckBox fx:id="derivativeCrit3" mnemonicParsing="false" prefHeight="17.0" prefWidth="78.0" text="Tangent" />
+                                                      <TextField fx:id="derivativeCritValue3" prefHeight="25.0" prefWidth="92.0" />
+                                                      <CheckBox fx:id="fixedCrit3" mnemonicParsing="false" prefHeight="20.0" prefWidth="200.0" text="Constant" />
+                                                      <GridPane prefHeight="55.0" prefWidth="190.0">
+                                                         <children>
+                                                            <Label text="Min" />
+                                                            <TextField fx:id="critMin3" GridPane.columnIndex="1" />
+                                                            <TextField fx:id="critMax3" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                            <Label text="Max" GridPane.rowIndex="1" />
+                                                         </children>
+                                                         <columnConstraints>
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                         </columnConstraints>
+                                                         <rowConstraints>
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                         </rowConstraints>
+                                                      </GridPane>
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                          </TitledPane>
+            												<TitledPane text="Tests">
+            													<content>
+            														<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="9.0" prefWidth="200.0">
+                                                   <children>
+                                                      <ProgressBar fx:id="testProgress3" prefWidth="200.0" progress="0.0" />
+                                                      <GridPane>
+                                                         <children>
+                                                            <CheckBox fx:id="testArima3" mnemonicParsing="false" selected="true" text="Arima" />
+                                                            <CheckBox fx:id="testBats3" mnemonicParsing="false" selected="true" text="Bats" GridPane.rowIndex="1" />
+                                                            <CheckBox fx:id="testGarch3" mnemonicParsing="false" selected="true" text="Garch" GridPane.rowIndex="2" />
+                                                            <CheckBox fx:id="testHoltWinters3" mnemonicParsing="false" selected="true" text="Holt Winters" GridPane.columnIndex="1" />
+                                                            <CheckBox fx:id="testRegression3" mnemonicParsing="false" selected="true" text="Regression" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                            <CheckBox fx:id="testNeural3" mnemonicParsing="false" selected="true" text="Neural" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                         </children>
+                                                         <columnConstraints>
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                         </columnConstraints>
+                                                         <rowConstraints>
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                         </rowConstraints>
+                                                      </GridPane>
+                                                      <GridPane>
+                                                         <children>
+                                                            <TextField fx:id="testRecords3" text="20" GridPane.columnIndex="1" />
+                                                            <Label prefHeight="17.0" prefWidth="115.0" text="Number of records" />
+                                                         </children>
+                                                         <columnConstraints>
+                                                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="117.0" minWidth="10.0" prefWidth="114.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="86.0" />
+                                                         </columnConstraints>
+                                                         <rowConstraints>
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                         </rowConstraints>
+                                                      </GridPane>
+                                                      <TextField fx:id="testResult3" editable="false" prefHeight="25.0" prefWidth="128.0" />
+                                                      <Label text="Best method:" />
+                                                      <Button fx:id="testStart3" mnemonicParsing="false" onAction="#startTest" text="Start tests" />
+                                                   </children></AnchorPane>
+            													</content>
+            												</TitledPane>
+            											</panes>
+            										</Accordion>
+      										<GridPane prefHeight="29.0" prefWidth="363.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+      											<columnConstraints>
+      												<ColumnConstraints hgrow="SOMETIMES" maxWidth="113.0" minWidth="10.0" prefWidth="54.0" />
+      												<ColumnConstraints hgrow="SOMETIMES" maxWidth="194.0" minWidth="10.0" prefWidth="169.0" />
+      												<ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="138.0" />
+      											</columnConstraints>
+      											<rowConstraints>
+      												<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      											</rowConstraints>
+      											<children>
+      												<Label prefHeight="17.0" prefWidth="71.0" text="Resource:" />
+      												<ChoiceBox fx:id="resourceChoiceBox3" prefHeight="25.0" prefWidth="193.0" GridPane.columnIndex="1" />
+      												<Button fx:id="applyAll3" mnemonicParsing="false" onAction="#ApplyAllButtonHandler" prefHeight="25.0" prefWidth="136.0" text="Apply all" GridPane.columnIndex="2" GridPane.halignment="RIGHT">
+      													<GridPane.margin>
+      														<Insets left="10.0" />
+      													</GridPane.margin>
+      												</Button>
+      											</children>
+      										</GridPane>
+      
+                              										<LineChart fx:id="lineChart3" animated="false" createSymbols="false" prefHeight="240.0" prefWidth="377.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="220.0" AnchorPane.topAnchor="20.0">
+      											<xAxis>
+      												<CategoryAxis />
+      											</xAxis>
+      											<yAxis>
+      												<NumberAxis />
+      											</yAxis>
+      										</LineChart>
+      										<Label text="Current prediction algorithm: " AnchorPane.topAnchor="0.0" />
+      										<Label fx:id="algorithmNameLabel3" prefHeight="17.0" prefWidth="223.0" text="hh" AnchorPane.leftAnchor="160.0" AnchorPane.topAnchor="0.0">
+      											<font>
+      												<Font name="System Bold" size="12.0" />
+      											</font>
+      										</Label>
+                                 </children>
+                                 <FlowPane.margin>
+                                    <Insets bottom="8.0" right="8.0" />
+                                 </FlowPane.margin>
+                              </AnchorPane>
+							           <AnchorPane fx:id="anchor4" prefHeight="355.0" prefWidth="605.0" visible="false">
+                                 <children>
+            										<Accordion prefHeight="294.0" prefWidth="211.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            											<panes>
+            												<TitledPane prefHeight="171.0" prefWidth="202.0" text="Prediction algorithm">
+            													<content>
+            														<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            															<children>
+            																<ChoiceBox fx:id="algorithmChoiceBox4" layoutX="5.0" layoutY="8.0" prefHeight="25.0" prefWidth="190.0" />
+            																  <GridPane fx:id="polyGrid4" layoutX="5.0" layoutY="40.0" prefHeight="29.0" prefWidth="190.0">
+                                                        <columnConstraints>
+                                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="110.0" minWidth="10.0" prefWidth="109.0" />
+                                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="81.0" />
+                                                        </columnConstraints>
+                                                        <rowConstraints>
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        </rowConstraints>
+                                                         <children>
+                                                            <Label prefHeight="17.0" prefWidth="112.0" text="Polynomial degree" />
+                                                            <TextField fx:id="regressionPolyDegree4" prefHeight="25.0" prefWidth="69.0" GridPane.columnIndex="1" />
+                                                         </children>
+                                                      </GridPane>
+            															</children>
+            														</AnchorPane>
+            													</content>
+            												</TitledPane>
+            												<TitledPane text="Prediction settings">
+            													<content>
+            														<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            															<children>
+            																<GridPane layoutX="6.0" layoutY="5.0" prefHeight="84.0" prefWidth="189.0">
+            																	<columnConstraints>
+            																		<ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="64.0" />
+            																		<ColumnConstraints hgrow="SOMETIMES" maxWidth="157.0" minWidth="10.0" prefWidth="156.0" />
+            																	</columnConstraints>
+            																	<rowConstraints>
+            																		<RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
+            																		<RowConstraints maxHeight="39.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+            																	</rowConstraints>
+            																	<children>
+            																		<GridPane>
+            																			<columnConstraints>
+            																				<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            																			</columnConstraints>
+            																			<rowConstraints>
+            																				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																			</rowConstraints>
+            																			<children>
+            																				<Label text="Probes" />
+            																				<Label prefHeight="17.0" prefWidth="58.0" text="Predict" GridPane.rowIndex="1" />
+            																			</children>
+            																		</GridPane>
+            																		<GridPane GridPane.columnIndex="1">
+            																			<columnConstraints>
+            																				<ColumnConstraints hgrow="SOMETIMES" maxWidth="69.0" minWidth="10.0" prefWidth="53.0" />
+            																				<ColumnConstraints hgrow="SOMETIMES" maxWidth="68.0" minWidth="0.0" prefWidth="3.0" />
+            																				<ColumnConstraints hgrow="SOMETIMES" maxWidth="93.0" minWidth="10.0" prefWidth="86.0" />
+            																			</columnConstraints>
+            																			<rowConstraints>
+            																				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																			</rowConstraints>
+            																			<children>
+            																				<GridPane>
+            																					<columnConstraints>
+            																						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            																					</columnConstraints>
+            																					<rowConstraints>
+            																						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																					</rowConstraints>
+            																					<children>
+            																						<TextField fx:id="predictionSettingsProbes4" />
+            																						<TextField fx:id="predictionSettingsToPredict4" GridPane.rowIndex="1" />
+            																					</children>
+            																				</GridPane>
+            																				<ChoiceBox fx:id="predictionSettingsProbesTimeUnitChoiceBox4" prefWidth="150.0" GridPane.columnIndex="2" />
+            																			</children>
+            																		</GridPane>
+            																		<GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+            																			<columnConstraints>
+            																				<ColumnConstraints hgrow="SOMETIMES" maxWidth="68.0" minWidth="10.0" prefWidth="52.0" />
+            																				<ColumnConstraints hgrow="SOMETIMES" maxWidth="68.0" minWidth="3.0" prefWidth="5.0" />
+            																				<ColumnConstraints hgrow="SOMETIMES" maxWidth="97.0" minWidth="10.0" prefWidth="87.0" />
+            																			</columnConstraints>
+            																			<rowConstraints>
+            																				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																			</rowConstraints>
+            																			<children>
+            																				<ChoiceBox fx:id="predictionSettingsUpdateTimeUnitChoiceBox4" prefWidth="150.0" GridPane.columnIndex="2" />
+            																				<TextField fx:id="predictionSettingsUpdate4" />
+            																			</children>
+            																		</GridPane>
+            																		<Label prefHeight="17.0" prefWidth="57.0" text="Update " GridPane.rowIndex="1" />
+            																	</children>
+            																</GridPane>
+            															</children>
+            														</AnchorPane>
+            													</content>
+            												</TitledPane>
+            												<TitledPane text="Neural Network settings">
+            													<content>
+            														<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="9.0" prefWidth="200.0">
+            															<children>
+            																<GridPane layoutX="5.0" layoutY="5.0" prefHeight="181.0" prefWidth="190.0">
+            																	<columnConstraints>
+            																		<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            																		<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            																	</columnConstraints>
+            																	<rowConstraints>
+            																		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            																	</rowConstraints>
+            																	<children>
+            																		<Label text="Set size" />
+            																		<Label text="Momentum" GridPane.rowIndex="2" />
+            																		<Label text="Max iterations" GridPane.rowIndex="3" />
+            																		<Label text="Max error inc." GridPane.rowIndex="4" />
+            																		<Label text="Max error" GridPane.rowIndex="5" />
+            																		<TextField fx:id="nSetSize4" GridPane.columnIndex="1" />
+            																		<TextField fx:id="nLearningRate4" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            																		<TextField fx:id="nMomentum4" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            																		<TextField fx:id="nMaxIter4" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            																		<TextField fx:id="nMaxErrorInc4" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            																		<TextField fx:id="nMaxError4" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            																		<Label text="Learning rate" GridPane.rowIndex="1" />
+                                                            <Label text="Initial records" GridPane.rowIndex="6" />
+                                                            <TextField fx:id="nOfInitialNetworkDataRecords4" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            																	</children>
+            																</GridPane>
+            																<Button fx:id="stop4" layoutX="5.0" layoutY="164.0" mnemonicParsing="false" onAction="#StopButtonHandler" prefHeight="25.0" prefWidth="59.0" text="Stop" AnchorPane.bottomAnchor="0.0" />
+            																<Button fx:id="continue4" layoutX="68.0" layoutY="164.0" mnemonicParsing="false" onAction="#ContinueButtonHandler" text="Continue" AnchorPane.bottomAnchor="0.0" />
+            																<Button fx:id="reset4" layoutX="137.0" layoutY="164.0" mnemonicParsing="false" onAction="#ResetButtonHandler" prefHeight="25.0" prefWidth="58.0" text="Reset" AnchorPane.bottomAnchor="0.0" />
+            															</children>
+            														</AnchorPane>
+            													</content>
+            												</TitledPane>
+                                          <TitledPane prefHeight="216.0" prefWidth="212.0" text="Critical values">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="9.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Slider fx:id="rangeSlider4" prefHeight="14.0" prefWidth="106.0" value="100.0"/>
+                                                      <Label text="Range" />
+                                                      <TextField fx:id="varianceCritValue4" prefHeight="25.0" prefWidth="92.0" />
+                                                      <CheckBox fx:id="varianceCrit4" mnemonicParsing="false" text="Variance" />
+                                                      <CheckBox fx:id="derivativeCrit4" mnemonicParsing="false" prefHeight="17.0" prefWidth="78.0" text="Tangent" />
+                                                      <TextField fx:id="derivativeCritValue4" prefHeight="25.0" prefWidth="92.0" />
+                                                      <CheckBox fx:id="fixedCrit4" mnemonicParsing="false" prefHeight="20.0" prefWidth="200.0" text="Constant" />
+                                                      <GridPane prefHeight="55.0" prefWidth="190.0">
+                                                         <children>
+                                                            <Label text="Min" />
+                                                            <TextField fx:id="critMin4" GridPane.columnIndex="1" />
+                                                            <TextField fx:id="critMax4" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                            <Label text="Max" GridPane.rowIndex="1" />
+                                                         </children>
+                                                         <columnConstraints>
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                         </columnConstraints>
+                                                         <rowConstraints>
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                         </rowConstraints>
+                                                      </GridPane>
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                          </TitledPane>
+            												<TitledPane text="Tests">
+            													<content>
+            														<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="9.0" prefWidth="200.0">
+                                                   <children>
+                                                      <ProgressBar fx:id="testProgress4" prefWidth="200.0" progress="0.0" />
+                                                      <GridPane>
+                                                         <children>
+                                                            <CheckBox fx:id="testArima4" mnemonicParsing="false" selected="true" text="Arima" />
+                                                            <CheckBox fx:id="testBats4" mnemonicParsing="false" selected="true" text="Bats" GridPane.rowIndex="1" />
+                                                            <CheckBox fx:id="testGarch4" mnemonicParsing="false" selected="true" text="Garch" GridPane.rowIndex="2" />
+                                                            <CheckBox fx:id="testHoltWinters4" mnemonicParsing="false" selected="true" text="Holt Winters" GridPane.columnIndex="1" />
+                                                            <CheckBox fx:id="testRegression4" mnemonicParsing="false" selected="true" text="Regression" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                            <CheckBox fx:id="testNeural4" mnemonicParsing="false" selected="true" text="Neural" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                         </children>
+                                                         <columnConstraints>
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                         </columnConstraints>
+                                                         <rowConstraints>
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                         </rowConstraints>
+                                                      </GridPane>
+                                                      <GridPane>
+                                                         <children>
+                                                            <TextField fx:id="testRecords4" text="20" GridPane.columnIndex="1" />
+                                                            <Label prefHeight="17.0" prefWidth="115.0" text="Number of records" />
+                                                         </children>
+                                                         <columnConstraints>
+                                                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="117.0" minWidth="10.0" prefWidth="114.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="86.0" />
+                                                         </columnConstraints>
+                                                         <rowConstraints>
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                         </rowConstraints>
+                                                      </GridPane>
+                                                      <TextField fx:id="testResult4" editable="false" prefHeight="25.0" prefWidth="128.0" />
+                                                      <Label text="Best method:" />
+                                                      <Button fx:id="testStart4" mnemonicParsing="false" onAction="#startTest" text="Start tests" />
+                                                   </children></AnchorPane>
+            													</content>
+            												</TitledPane>
+            												
+            											</panes>
+            										</Accordion>
+      										<GridPane prefHeight="29.0" prefWidth="363.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+      											<columnConstraints>
+      												<ColumnConstraints hgrow="SOMETIMES" maxWidth="113.0" minWidth="10.0" prefWidth="54.0" />
+      												<ColumnConstraints hgrow="SOMETIMES" maxWidth="194.0" minWidth="10.0" prefWidth="169.0" />
+      												<ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="138.0" />
+      											</columnConstraints>
+      											<rowConstraints>
+      												<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      											</rowConstraints>
+      											<children>
+      												<Label prefHeight="17.0" prefWidth="71.0" text="Resource:" />
+      												<ChoiceBox fx:id="resourceChoiceBox4" prefHeight="25.0" prefWidth="193.0" GridPane.columnIndex="1" />
+      												<Button fx:id="applyAll4" mnemonicParsing="false" onAction="#ApplyAllButtonHandler" prefHeight="25.0" prefWidth="136.0" text="Apply all" GridPane.columnIndex="2" GridPane.halignment="RIGHT">
+      													<GridPane.margin>
+      														<Insets left="10.0" />
+      													</GridPane.margin>
+      												</Button>
+      											</children>
+      										</GridPane>
+      
+                              										<LineChart fx:id="lineChart4" animated="false" createSymbols="false" prefHeight="240.0" prefWidth="377.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="220.0" AnchorPane.topAnchor="20.0">
+      											<xAxis>
+      												<CategoryAxis />
+      											</xAxis>
+      											<yAxis>
+      												<NumberAxis />
+      											</yAxis>
+      										</LineChart>
+      										<Label text="Current prediction algorithm: " AnchorPane.topAnchor="0.0" />
+      										<Label fx:id="algorithmNameLabel4" prefHeight="17.0" prefWidth="223.0" text="hh" AnchorPane.leftAnchor="160.0" AnchorPane.topAnchor="0.0">
+      											<font>
+      												<Font name="System Bold" size="12.0" />
+      											</font>
+      										</Label>
+                                 </children>
+                                 <FlowPane.margin>
+                                    <Insets bottom="8.0" right="8.0" />
+                                 </FlowPane.margin>
+                              </AnchorPane>
+                           </children>
+                        </FlowPane>
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+				<Tab fx:id="tab2" text="Settings">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+							<children>
+								<GridPane layoutX="13.0" layoutY="49.0" prefHeight="70.0" prefWidth="741.0">
+									<columnConstraints>
+										<ColumnConstraints hgrow="SOMETIMES" maxWidth="364.0" minWidth="10.0" prefWidth="137.0" />
+										<ColumnConstraints hgrow="SOMETIMES" maxWidth="605.0" minWidth="10.0" prefWidth="603.0" />
+									</columnConstraints>
+									<rowConstraints>
+										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+									</rowConstraints>
+									<children>
+										<Label text="R Library Script Path:" />
+										<Label text="R Library EXE Path:" GridPane.rowIndex="1" />
+										<TextField fx:id="rScriptPath" GridPane.columnIndex="1" />
+										<TextField fx:id="rExePath" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+									</children>
+								</GridPane>
+								<Button fx:id="settingsSaveButton" layoutX="13.0" layoutY="137.0" mnemonicParsing="false" onAction="#handleSaveButtonAction" prefHeight="25.0" prefWidth="124.0" text="Save" />
+								<Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="917.0" text="RMSP uses powerful R Library (https://www.r-project.org/) for complex computing operations. If your R installation path differs from default one, please configure it below" />
+      								<Label fx:id="statusLabel" layoutX="14.0" layoutY="31.0" prefHeight="10.0" prefWidth="531.0" textFill="#f20101">
+      									<font>
+      										<Font name="System Italic" size="10.0" />
+      									</font>
+      								</Label>
+
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+			</tabs>
+		</TabPane>
+      <MenuBar prefHeight="29.0" prefWidth="1000.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="RMSP View">
+            <items>
+                  <RadioMenuItem fx:id="radio1" mnemonicParsing="false" onAction="#menuViewAction" selected="true" text="1 chart">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="tgCharts" />
+                     </toggleGroup>
+                  </RadioMenuItem>
+                  <RadioMenuItem fx:id="radio2" mnemonicParsing="false" onAction="#menuViewAction" text="2 charts" toggleGroup="$tgCharts" />
+                  <RadioMenuItem fx:id="radio3" mnemonicParsing="false" onAction="#menuViewAction" text="3 charts" toggleGroup="$tgCharts" />
+                  <RadioMenuItem fx:id="radio4" mnemonicParsing="false" onAction="#menuViewAction" text="4 charts" toggleGroup="$tgCharts" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Settings">
+               <items>
+                  <MenuItem fx:id="menuSettings" mnemonicParsing="false" onAction="#menuViewAction" text="R library" />
+               </items></Menu>
+        </menus>
+      </MenuBar>
+		<fx:define>
+			<ArrayList fx:id="lineChart">
+				<fx:reference source="lineChart1" />
+				<fx:reference source="lineChart2" />
+				<fx:reference source="lineChart3" />
+				<fx:reference source="lineChart4" />
+			</ArrayList>
+			<ArrayList fx:id="resourceChoiceBox">
+				<fx:reference source="resourceChoiceBox1" />
+				<fx:reference source="resourceChoiceBox2" />
+				<fx:reference source="resourceChoiceBox3" />
+				<fx:reference source="resourceChoiceBox4" />
+			</ArrayList>
+			<ArrayList fx:id="algorithmNameLabel">
+				<fx:reference source="algorithmNameLabel1" />
+				<fx:reference source="algorithmNameLabel2" />
+				<fx:reference source="algorithmNameLabel3" />
+				<fx:reference source="algorithmNameLabel4" />
+			</ArrayList>
+			<ArrayList fx:id="algorithmChoiceBox">
+				<fx:reference source="algorithmChoiceBox1" />
+				<fx:reference source="algorithmChoiceBox2" />
+				<fx:reference source="algorithmChoiceBox3" />
+				<fx:reference source="algorithmChoiceBox4" />
+			</ArrayList>
+			<ArrayList fx:id="predictionSettingsUpdateTimeUnitChoiceBox">
+				<fx:reference source="predictionSettingsUpdateTimeUnitChoiceBox1" />
+				<fx:reference source="predictionSettingsUpdateTimeUnitChoiceBox2" />
+				<fx:reference source="predictionSettingsUpdateTimeUnitChoiceBox3" />
+				<fx:reference source="predictionSettingsUpdateTimeUnitChoiceBox4" />
+			</ArrayList>
+			<ArrayList fx:id="predictionSettingsProbesTimeUnitChoiceBox">
+				<fx:reference source="predictionSettingsProbesTimeUnitChoiceBox1" />
+				<fx:reference source="predictionSettingsProbesTimeUnitChoiceBox2" />
+				<fx:reference source="predictionSettingsProbesTimeUnitChoiceBox3" />
+				<fx:reference source="predictionSettingsProbesTimeUnitChoiceBox4" />
+			</ArrayList>
+			<ArrayList fx:id="predictionSettingsProbes">
+				<fx:reference source="predictionSettingsProbes1" />
+				<fx:reference source="predictionSettingsProbes2" />
+				<fx:reference source="predictionSettingsProbes3" />
+				<fx:reference source="predictionSettingsProbes4" />
+			</ArrayList>
+			<ArrayList fx:id="predictionSettingsToPredict">
+				<fx:reference source="predictionSettingsToPredict1" />
+				<fx:reference source="predictionSettingsToPredict2" />
+				<fx:reference source="predictionSettingsToPredict3" />
+				<fx:reference source="predictionSettingsToPredict4" />
+			</ArrayList>
+			<ArrayList fx:id="predictionSettingsUpdate">
+				<fx:reference source="predictionSettingsUpdate1" />
+				<fx:reference source="predictionSettingsUpdate2" />
+				<fx:reference source="predictionSettingsUpdate3" />
+				<fx:reference source="predictionSettingsUpdate4" />
+			</ArrayList>
+			<ArrayList fx:id="nSetSize">
+				<fx:reference source="nSetSize1" />
+				<fx:reference source="nSetSize2" />
+				<fx:reference source="nSetSize3" />
+				<fx:reference source="nSetSize4" />
+			</ArrayList>
+			<ArrayList fx:id="nLearningRate">
+				<fx:reference source="nLearningRate1" />
+				<fx:reference source="nLearningRate2" />
+				<fx:reference source="nLearningRate3" />
+				<fx:reference source="nLearningRate4" />
+			</ArrayList>
+			<ArrayList fx:id="nMomentum">
+				<fx:reference source="nMomentum1" />
+				<fx:reference source="nMomentum2" />
+				<fx:reference source="nMomentum3" />
+				<fx:reference source="nMomentum4" />
+			</ArrayList>
+			<ArrayList fx:id="nMaxIter">
+				<fx:reference source="nMaxIter1" />
+				<fx:reference source="nMaxIter2" />
+				<fx:reference source="nMaxIter3" />
+				<fx:reference source="nMaxIter4" />
+			</ArrayList>
+			<ArrayList fx:id="nMaxErrorInc">
+				<fx:reference source="nMaxErrorInc1" />
+				<fx:reference source="nMaxErrorInc2" />
+				<fx:reference source="nMaxErrorInc3" />
+				<fx:reference source="nMaxErrorInc4" />
+			</ArrayList>
+			<ArrayList fx:id="nMaxError">
+				<fx:reference source="nMaxError1" />
+				<fx:reference source="nMaxError2" />
+				<fx:reference source="nMaxError3" />
+				<fx:reference source="nMaxError4" />
+			</ArrayList>
+			<ArrayList fx:id="nOfInitialNetworkDataRecords">
+				<fx:reference source="nOfInitialNetworkDataRecords1" />
+				<fx:reference source="nOfInitialNetworkDataRecords2" />
+				<fx:reference source="nOfInitialNetworkDataRecords3" />
+				<fx:reference source="nOfInitialNetworkDataRecords4" />
+			</ArrayList>
+			<ArrayList fx:id="critMin">
+				<fx:reference source="critMin1" />
+				<fx:reference source="critMin2" />
+				<fx:reference source="critMin3" />
+				<fx:reference source="critMin4" />
+			</ArrayList>
+			<ArrayList fx:id="critMax">
+				<fx:reference source="critMax1" />
+				<fx:reference source="critMax2" />
+				<fx:reference source="critMax3" />
+				<fx:reference source="critMax4" />
+			</ArrayList>
+			<ArrayList fx:id="fixedCrit">
+				<fx:reference source="fixedCrit1" />
+				<fx:reference source="fixedCrit2" />
+				<fx:reference source="fixedCrit3" />
+				<fx:reference source="fixedCrit4" />
+			</ArrayList>
+			<ArrayList fx:id="derivativeCrit">
+				<fx:reference source="derivativeCrit1" />
+				<fx:reference source="derivativeCrit2" />
+				<fx:reference source="derivativeCrit3" />
+				<fx:reference source="derivativeCrit4" />
+			</ArrayList>
+			<ArrayList fx:id="varianceCrit">
+				<fx:reference source="varianceCrit1" />
+				<fx:reference source="varianceCrit2" />
+				<fx:reference source="varianceCrit3" />
+				<fx:reference source="varianceCrit4" />
+			</ArrayList>
+			<ArrayList fx:id="derivativeCritValue">
+				<fx:reference source="derivativeCritValue1" />
+				<fx:reference source="derivativeCritValue2" />
+				<fx:reference source="derivativeCritValue3" />
+				<fx:reference source="derivativeCritValue4" />
+			</ArrayList>
+			<ArrayList fx:id="varianceCritValue">
+				<fx:reference source="varianceCritValue1" />
+				<fx:reference source="varianceCritValue2" />
+				<fx:reference source="varianceCritValue3" />
+				<fx:reference source="varianceCritValue4" />
+			</ArrayList>
+			<ArrayList fx:id="anchor">
+				<fx:reference source="anchor1" />
+				<fx:reference source="anchor2" />
+				<fx:reference source="anchor3" />
+				<fx:reference source="anchor4" />
+			</ArrayList>
+			<ArrayList fx:id="testArima">
+				<fx:reference source="testArima1" />
+				<fx:reference source="testArima2" />
+				<fx:reference source="testArima3" />
+				<fx:reference source="testArima4" />
+			</ArrayList>
+			<ArrayList fx:id="testBats">
+				<fx:reference source="testBats1" />
+				<fx:reference source="testBats2" />
+				<fx:reference source="testBats3" />
+				<fx:reference source="testBats4" />
+			</ArrayList>
+			<ArrayList fx:id="testGarch">
+				<fx:reference source="testGarch1" />
+				<fx:reference source="testGarch2" />
+				<fx:reference source="testGarch3" />
+				<fx:reference source="testGarch4" />
+			</ArrayList>
+			<ArrayList fx:id="testHoltWinters">
+				<fx:reference source="testHoltWinters1" />
+				<fx:reference source="testHoltWinters2" />
+				<fx:reference source="testHoltWinters3" />
+				<fx:reference source="testHoltWinters4" />
+			</ArrayList>
+			<ArrayList fx:id="testRegression">
+				<fx:reference source="testRegression1" />
+				<fx:reference source="testRegression2" />
+				<fx:reference source="testRegression3" />
+				<fx:reference source="testRegression4" />
+			</ArrayList>
+			<ArrayList fx:id="testNeural">
+				<fx:reference source="testNeural1" />
+				<fx:reference source="testNeural2" />
+				<fx:reference source="testNeural3" />
+				<fx:reference source="testNeural4" />
+			</ArrayList>
+			<ArrayList fx:id="testProgress">
+				<fx:reference source="testProgress1" />
+				<fx:reference source="testProgress2" />
+				<fx:reference source="testProgress3" />
+				<fx:reference source="testProgress4" />
+			</ArrayList>
+			<ArrayList fx:id="testStart">
+				<fx:reference source="testStart1" />
+				<fx:reference source="testStart2" />
+				<fx:reference source="testStart3" />
+				<fx:reference source="testStart4" />
+			</ArrayList>
+			<ArrayList fx:id="testResult">
+				<fx:reference source="testResult1" />
+				<fx:reference source="testResult2" />
+				<fx:reference source="testResult3" />
+				<fx:reference source="testResult4" />
+			</ArrayList>
+			<ArrayList fx:id="testRecords">
+				<fx:reference source="testRecords1" />
+				<fx:reference source="testRecords2" />
+				<fx:reference source="testRecords3" />
+				<fx:reference source="testRecords4" />
+			</ArrayList>
+			<ArrayList fx:id="regressionPolyDegree">
+				<fx:reference source="regressionPolyDegree1" />
+				<fx:reference source="regressionPolyDegree2" />
+				<fx:reference source="regressionPolyDegree3" />
+				<fx:reference source="regressionPolyDegree4" />
+			</ArrayList>
+			<ArrayList fx:id="polyGrid">
+				<fx:reference source="polyGrid1" />
+				<fx:reference source="polyGrid2" />
+				<fx:reference source="polyGrid3" />
+				<fx:reference source="polyGrid4" />
+			</ArrayList>
+			<ArrayList fx:id="rangeSlider">
+				<fx:reference source="rangeSlider1" />
+				<fx:reference source="rangeSlider2" />
+				<fx:reference source="rangeSlider3" />
+				<fx:reference source="rangeSlider4" />
+			</ArrayList>
+		</fx:define>
+	</children>
+</AnchorPane>

@@ -1,0 +1,11 @@
+.idea/*
+.settings/*
+target/*
+
+*.iml
+.classpath
+.project
+/target/
+*/target/**
+
+*/rcaller.properties

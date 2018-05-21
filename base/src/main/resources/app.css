@@ -1,0 +1,58 @@
+.chart-series-line {
+    -fx-stroke-width: 2px;
+    -fx-effect: null;
+}
+
+.default-color0.chart-series-line { -fx-stroke: dodgerblue; }
+.default-color1.chart-series-line {
+    -fx-stroke: limegreen;
+    -fx-stroke-dash-array: 1 5;
+}
+.default-color2.chart-series-line {
+    -fx-stroke: orange;
+    -fx-stroke-dash-array: 1 5;
+}
+.default-color3.chart-series-line {
+    -fx-stroke: orange;
+    -fx-stroke-dash-array: 1 5;
+}
+.default-color4.chart-series-line {
+    -fx-stroke: red;
+    -fx-stroke-width: 0.5px;
+}
+.default-color5.chart-series-line {
+    -fx-stroke: red;
+    -fx-stroke-width: 0.5px;
+}
+
+.default-color6.chart-series-line {
+    -fx-stroke: red;
+    -fx-stroke-width: 0.5px;
+}
+
+.default-color7.chart-series-line {
+    -fx-stroke: red;
+    -fx-stroke-width: 0.5px;
+}
+
+.default-color8.chart-series-line {
+    -fx-stroke: red;
+    -fx-stroke-width: 0.5px;
+}
+.default-color9.chart-series-line {
+    -fx-stroke: red;
+    -fx-stroke-width: 0.5px;
+}
+
+
+
+.default-color0.chart-line-symbol { -fx-background-color: dodgerblue, white; }
+.default-color1.chart-line-symbol { -fx-background-color: limegreen, white; }
+.default-color2.chart-line-symbol { -fx-background-color: orange, white; }
+.default-color3.chart-line-symbol { -fx-background-color: orange, white; }
+.default-color4.chart-line-symbol { -fx-background-color: red, white; }
+.default-color5.chart-line-symbol { -fx-background-color: red, white; }
+.default-color6.chart-line-symbol { -fx-background-color: red, white; }
+.default-color7.chart-line-symbol { -fx-background-color: red, white; }
+.default-color8.chart-line-symbol { -fx-background-color: red, white; }
+.default-color9.chart-line-symbol { -fx-background-color: red, white; }
